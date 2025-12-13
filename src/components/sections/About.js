@@ -16,7 +16,7 @@ import {
   SiChakraui,
 } from "react-icons/si";
 import { MdApi } from "react-icons/md";
-import Image from 'next/image';
+import Image from "next/image";
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -83,6 +83,7 @@ const StyledPic = styled.div`
     display: block;
     position: relative;
     width: 100%;
+    aspect-ratio: 1 / 1;
     border-radius: 4px;
 
     &:hover {
@@ -93,11 +94,10 @@ const StyledPic = styled.div`
     }
 
     .img {
-      position: relative;
+      position: absolute;
       border-radius: 4px;
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-      width: 100%;
-      height: auto;
+      inset: 0;
       display: block;
     }
 
@@ -174,11 +174,14 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <Image src="/headshot.jpeg"
-            alt="Foto de perfil"
-            className="img"
-            width={400}
-            height={400}
+            <Image
+              src="/headshot.jpeg"
+              alt="Foto de perfil"
+              className="img"
+              fill
+              sizes="(max-width: 768px) 70vw, 300px"
+              priority
+              style={{ objectFit: "cover" }}
             />
           </div>
         </StyledPic>

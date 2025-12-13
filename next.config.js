@@ -10,7 +10,7 @@ const nextConfig = {
     styledComponents: true,
   },
   experimental: {
-    optimizePackageImports: ["styled-components"],
+    optimizePackageImports: ['styled-components'],
   },
 };
 
