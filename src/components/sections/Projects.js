@@ -480,33 +480,6 @@ const Projects = () => {
       images: [],
       technologies: ["React", "Firebase", "Chart.js", "Material-UI"],
     },
-    "rocketseat-login": {
-      title: "Cópia Login Rocketseat",
-      description:
-        "Reprodução fiel da interface de login da Rocketseat, demonstrando habilidades em UI/UX e desenvolvimento front-end.",
-      images: ["/images/rocket/login.png"],
-      technologies: ["React", "Styled Components", "TypeScript"],
-    },
-    massoterapia: {
-      title: "Massoterapia",
-      description:
-        "Website profissional para clínica de massoterapia com agendamento online, galeria de serviços e área do cliente.",
-      images: ["/images/previamasso.png"],
-      technologies: [
-        "Next.js",
-        "React",
-        "Styled Components",
-        "Node.js",
-        "MySQL",
-      ],
-    },
-    "yugioh-game": {
-      title: "Yu-Gi-Oh Interativo",
-      description:
-        "Jogo interativo baseado no universo Yu-Gi-Oh com mecânicas de cartas, batalhas e coleção de decks.",
-      images: ["/images/previayugioh.png"],
-      technologies: ["JavaScript", "HTML5", "CSS3", "Canvas API"],
-    },
     "sistema-vacinacao": {
       title: "Sistema Controle de Vacinação",
       description:
@@ -618,89 +591,6 @@ Originalmente desenvolvido por mim no início de 2025 como meu primeiro projeto 
               >
                 <FaEye /> Prévia
               </button>
-            </StyledCardActions>
-            <StyledCardBottomBar />
-          </StyledCardContent>
-        </StyledCategoryCard>
-
-        <StyledCategoryCard>
-          <StyledCardContent>
-            <StyledCardTitle>Cópia Login Rocketseat</StyledCardTitle>
-            <StyledCardDescription>
-              Reprodução fiel da interface de login da Rocketseat, demonstrando
-              habilidades em UI/UX e desenvolvimento front-end.
-            </StyledCardDescription>
-            <StyledCardActions className="two-buttons">
-              <Link
-                href="https://github.com/usuario/rocketseat-login"
-                className="btn-github"
-              >
-                <FaGithub /> Repositório
-              </Link>
-              <button
-                onClick={() => openModal("rocketseat-login")}
-                className="btn-preview"
-              >
-                <FaEye /> Prévia
-              </button>
-            </StyledCardActions>
-            <StyledCardBottomBar />
-          </StyledCardContent>
-        </StyledCategoryCard>
-
-        <StyledCategoryCard>
-          <StyledCardContent>
-            <StyledCardTitle>Massoterapia</StyledCardTitle>
-            <StyledCardDescription>
-              Website profissional para clínica de massoterapia.
-            </StyledCardDescription>
-            <StyledCardActions className="three-buttons">
-              <Link
-                href="https://github.com/usuario/massoterapia"
-                className="btn-github"
-              >
-                <FaGithub /> Repositório
-              </Link>
-              <button
-                onClick={() => openModal("massoterapia")}
-                className="btn-preview"
-              >
-                <FaEye /> Prévia
-              </button>
-              <Link
-                href="https://massoterapia-site.vercel.app"
-                className="btn-live"
-              >
-                <FaExternalLinkAlt /> Site
-              </Link>
-            </StyledCardActions>
-            <StyledCardBottomBar />
-          </StyledCardContent>
-        </StyledCategoryCard>
-
-        <StyledCategoryCard>
-          <StyledCardContent>
-            <StyledCardTitle>Yu-Gi-Oh Interativo</StyledCardTitle>
-            <StyledCardDescription>
-              Jogo interativo baseado no universo Yu-Gi-Oh com mecânicas de
-              cartas, batalhas e coleção de decks.
-            </StyledCardDescription>
-            <StyledCardActions className="three-buttons">
-              <Link
-                href="https://github.com/usuario/yugioh-game"
-                className="btn-github"
-              >
-                <FaGithub /> Repositório
-              </Link>
-              <button
-                onClick={() => openModal("yugioh-game")}
-                className="btn-preview"
-              >
-                <FaEye /> Prévia
-              </button>
-              <Link href="https://yugioh-game.vercel.app" className="btn-live">
-                <FaExternalLinkAlt /> Site
-              </Link>
             </StyledCardActions>
             <StyledCardBottomBar />
           </StyledCardContent>
