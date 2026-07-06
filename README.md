@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio — Mário Laux Neto
 
-## Getting Started
+Site pessoal em Next.js (App Router + TypeScript) consumindo o Supabase diretamente
+(sem API própria). Site público em Server Components; painel administrativo protegido
+por Supabase Auth para editar todo o conteúdo (perfil, skills, experiências, projetos e links).
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router, TypeScript, Turbopack)
+- Tailwind CSS v4
+- Supabase (`@supabase/supabase-js` + `@supabase/ssr`)
+- Framer Motion, lucide-react
+
+## Rodando localmente
+
+1. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+2. Copie `.env.local.example` para `.env.local` e preencha com as chaves do seu projeto Supabase
+   (Project Settings → API):
+
+   ```bash
+   cp .env.local.example .env.local
+   ```
+
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=https://<seu-projeto>.supabase.co
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=<sua-anon-key>
+   ```
+
+3. Rode o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+   Site público: [http://localhost:3000](http://localhost:3000)
+   Painel admin: `http://localhost:3000/mln-27x9` (veja abaixo sobre essa rota).
+
+## Estrutura de dados (Supabase)
+
+O schema (tabelas `profile`, `skills`, `experiences`, `experience_tasks`, `experience_tags`,
+`projects`, `project_tags`, `project_images`, `links`) e os buckets de Storage (`photos`,
+`resume`, `project-media`) já devem existir no projeto Supabase. Leitura é pública em todas
+as tabelas/buckets; escrita exige um usuário autenticado.
+
+> **Nota desta configuração:** ao integrar o projeto, as políticas de RLS e os buckets de
+> Storage só existiam para a tabela `profile` — as demais tabelas tinham RLS habilitado sem
+> nenhuma política (bloqueando toda leitura) e os buckets não existiam. Ambos foram criados
+> para espelhar exatamente o padrão de `profile` (SELECT público, ALL para `authenticated`).
+> Se você recriar o projeto Supabase do zero, replique isso antes de usar o painel.
+
+## Autenticação do admin
+
+- Rota do painel: **`/mln-27x9`** (slug propositalmente discreto — não aparece em nenhum
+  menu, link ou sitemap do site público, e é bloqueada via `robots.txt`).
+- Login com email/senha via Supabase Auth (`/mln-27x9/login`). Não há cadastro público —
+  crie o usuário admin em Supabase Dashboard → Authentication → Users → Add user.
+- Um usuário temporário foi criado durante o desenvolvimento
+  (`marioneto@unochapeco.edu.br` / senha temporária informada no chat). **Troque essa senha
+  imediatamente** em Authentication → Users → selecione o usuário → Reset password.
+- Se quiser trocar o slug da rota, edite `ADMIN_BASE_PATH` em `src/lib/constants.ts`.
+
+## Deploy na Vercel
+
+1. Suba o repositório para o GitHub/GitLab/Bitbucket.
+2. Importe o projeto em [vercel.com/new](https://vercel.com/new).
+3. Configure as variáveis de ambiente no painel do projeto (Settings → Environment Variables):
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+4. Deploy. O build (`next build`) roda `next lint`/checagem de tipos automaticamente.
+
+Nenhuma configuração adicional (`vercel.json`) é necessária — é um projeto Next.js padrão.
+
+## Scripts
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev     # desenvolvimento (Turbopack)
+npm run build   # build de produção
+npm run start   # serve o build de produção
+npm run lint    # eslint
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
