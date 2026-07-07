@@ -13,17 +13,15 @@ export function FlashlightEffect() {
     const handleMove = (e: MouseEvent) => {
       el.style.setProperty("--x", `${e.clientX}px`);
       el.style.setProperty("--y", `${e.clientY}px`);
+      setActive(true);
     };
-    const handleEnter = () => setActive(true);
     const handleLeave = () => setActive(false);
 
     window.addEventListener("mousemove", handleMove);
-    document.addEventListener("mouseenter", handleEnter);
     document.addEventListener("mouseleave", handleLeave);
 
     return () => {
       window.removeEventListener("mousemove", handleMove);
-      document.removeEventListener("mouseenter", handleEnter);
       document.removeEventListener("mouseleave", handleLeave);
     };
   }, []);
