@@ -216,28 +216,33 @@ function ExperienceCard({
             />
           </Field>
         </div>
-        <div className="flex items-center gap-1 pt-6">
-          <button
-            type="button"
-            onClick={onMoveUp}
-            disabled={!onMoveUp}
-            className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
-            aria-label="Mover para cima"
-          >
-            <ArrowUp size={14} />
-          </button>
-          <button
-            type="button"
-            onClick={onMoveDown}
-            disabled={!onMoveDown}
-            className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
-            aria-label="Mover para baixo"
-          >
-            <ArrowDown size={14} />
-          </button>
+        <div className="flex items-center gap-3 pt-6">
+          <div className="flex items-center gap-1 rounded-md border border-navy-600 p-1">
+            <button
+              type="button"
+              onClick={onMoveUp}
+              disabled={!onMoveUp}
+              title="Mover experiência para cima"
+              className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
+              aria-label="Mover experiência para cima"
+            >
+              <ArrowUp size={14} />
+            </button>
+            <button
+              type="button"
+              onClick={onMoveDown}
+              disabled={!onMoveDown}
+              title="Mover experiência para baixo"
+              className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
+              aria-label="Mover experiência para baixo"
+            >
+              <ArrowDown size={14} />
+            </button>
+          </div>
           <button
             type="button"
             onClick={onDelete}
+            title="Remover experiência"
             className="rounded p-1.5 text-ink-500 hover:text-red-400"
             aria-label="Remover experiência"
           >
