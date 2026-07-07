@@ -34,9 +34,11 @@ export function ExperienceManager({
         company: "Nova empresa",
         role: "Cargo",
         period: "Período",
-        order_index: experiences.length,
+        order_index: 0,
       });
-      setExperiences((prev) => [...prev, { ...created, tasks: [], tags: [] }]);
+      const next = [{ ...created, tasks: [], tags: [] }, ...experiences];
+      setExperiences(next);
+      await reorderExperiences(next.map((e) => e.id));
     } catch (error) {
       showToast("error", toastErrorMessage(error));
     } finally {
@@ -244,9 +246,9 @@ function ExperienceCard({
         </div>
       </div>
 
-      <Button variant="ghost" onClick={handleSaveFields} disabled={saving}>
+      <Button onClick={handleSaveFields} disabled={saving}>
         {saving && <Loader2 size={14} className="animate-spin" />}
-        Salvar campos
+        Salvar alterações
       </Button>
 
       <div>
