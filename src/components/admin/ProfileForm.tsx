@@ -103,7 +103,7 @@ export function ProfileForm({ initialProfile }: { initialProfile: Profile | null
               onChange={handlePhotoChange}
               disabled={uploadingPhoto}
             />
-            <span className="inline-flex cursor-pointer items-center gap-2 rounded-md border border-navy-600 px-3.5 py-2 text-sm text-ink-300 hover:border-violet-500 hover:text-violet-400">
+            <span className="inline-flex cursor-pointer items-center gap-2 rounded-md border border-navy-600 px-3.5 py-2 text-sm text-ink-300 hover:border-cyan-500 hover:text-cyan-400">
               {uploadingPhoto ? <Loader2 size={16} className="animate-spin" /> : <Upload size={16} />}
               {uploadingPhoto ? "Enviando..." : "Alterar foto"}
             </span>
@@ -126,7 +126,7 @@ export function ProfileForm({ initialProfile }: { initialProfile: Profile | null
               onChange={handleResumeChange}
               disabled={uploadingResume}
             />
-            <span className="inline-flex cursor-pointer items-center gap-2 rounded-md border border-navy-600 px-3.5 py-2 text-sm text-ink-300 hover:border-violet-500 hover:text-violet-400">
+            <span className="inline-flex cursor-pointer items-center gap-2 rounded-md border border-navy-600 px-3.5 py-2 text-sm text-ink-300 hover:border-cyan-500 hover:text-cyan-400">
               {uploadingResume ? <Loader2 size={16} className="animate-spin" /> : <Upload size={16} />}
               {uploadingResume ? "Enviando..." : "Alterar currículo (PDF)"}
             </span>
@@ -136,7 +136,7 @@ export function ProfileForm({ initialProfile }: { initialProfile: Profile | null
               href={profile.resume_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-xs text-violet-400 underline"
+              className="block text-xs text-cyan-400 underline"
             >
               Ver currículo atual
             </a>

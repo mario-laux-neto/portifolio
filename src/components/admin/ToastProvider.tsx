@@ -43,7 +43,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
               exit={{ opacity: 0, scale: 0.95 }}
               className={`flex items-center gap-2 rounded-lg border px-4 py-3 text-sm shadow-lg ${
                 toast.kind === "success"
-                  ? "border-violet-500/40 bg-navy-800 text-violet-300"
+                  ? "border-cyan-500/40 bg-navy-800 text-cyan-300"
                   : "border-red-500/40 bg-navy-800 text-red-300"
               }`}
             >

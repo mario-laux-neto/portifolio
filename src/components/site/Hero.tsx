@@ -1,4 +1,5 @@
 import type { Profile } from "@/lib/types";
+import { ChevronDown } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 function whatsappHref(whatsapp?: string | null) {
@@ -11,10 +12,15 @@ export function Hero({ profile }: { profile: Profile | null }) {
   return (
     <section
       id="home"
-      className="section-shell flex min-h-[92vh] flex-col justify-center gap-6 pt-24"
+      className="section-shell relative flex min-h-[92vh] flex-col justify-center gap-6 pt-24"
     >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-1/3 -z-10 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/15 blur-[120px]"
+      />
+
       <Reveal>
-        <p className="font-mono text-sm text-violet-400 sm:text-base">
+        <p className="font-mono text-sm text-cyan-400 sm:text-base">
           Olá, meu nome é
         </p>
       </Reveal>
@@ -44,11 +50,19 @@ export function Hero({ profile }: { profile: Profile | null }) {
           href={whatsappHref(profile?.whatsapp)}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-block rounded-md border border-violet-500 px-7 py-4 font-mono text-sm text-violet-400 transition-all hover:-translate-y-1 hover:bg-violet-500/10 hover:shadow-[0_10px_30px_-15px_rgba(139,92,246,0.5)]"
+          className="mt-4 inline-block rounded-md border border-cyan-500 px-7 py-4 font-mono text-sm text-cyan-400 shadow-[0_0_25px_-8px_rgba(56,189,248,0.5)] transition-all hover:-translate-y-1 hover:bg-cyan-500/10"
         >
           Entre em contato!
         </a>
       </Reveal>
+
+      <a
+        href="#about"
+        aria-label="Rolar para a seção Sobre mim"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ink-500 transition-colors hover:text-cyan-400"
+      >
+        <ChevronDown className="animate-bounce" size={28} />
+      </a>
     </section>
   );
 }

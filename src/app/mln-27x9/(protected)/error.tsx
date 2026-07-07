@@ -12,7 +12,7 @@ export default function AdminError({
       <button
         type="button"
         onClick={reset}
-        className="rounded-md border border-violet-500 px-4 py-2 text-sm text-violet-400 hover:bg-violet-500/10"
+        className="rounded-md border border-cyan-500 px-4 py-2 text-sm text-cyan-400 hover:bg-cyan-500/10"
       >
         Tentar novamente
       </button>

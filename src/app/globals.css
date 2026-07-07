@@ -5,22 +5,22 @@
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
   --font-signature: var(--font-caveat), cursive;
 
-  --color-navy-950: #05070f;
-  --color-navy-900: #0a0f1f;
-  --color-navy-800: #10182d;
-  --color-navy-700: #182238;
-  --color-navy-600: #232f4a;
-  --color-navy-500: #34405e;
+  --color-navy-950: #1a2332;
+  --color-navy-900: #212b3c;
+  --color-navy-800: #2b3648;
+  --color-navy-700: #38445a;
+  --color-navy-600: #4b5770;
+  --color-navy-500: #64708c;
 
-  --color-ink-100: #f1f2f8;
-  --color-ink-300: #c2c8db;
-  --color-ink-500: #8b93ab;
-  --color-ink-700: #5b6280;
+  --color-ink-100: #f1f4f8;
+  --color-ink-300: #c3cad9;
+  --color-ink-500: #8b95ab;
+  --color-ink-700: #5b6478;
 
-  --color-violet-400: #a78bfa;
-  --color-violet-500: #8b5cf6;
-  --color-violet-600: #7c3aed;
-  --color-violet-700: #6428c4;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #38bdf8;
+  --color-cyan-600: #0ea5e9;
+  --color-cyan-700: #0369a1;
 
   --animate-fade-up: fade-up 0.6s ease both;
 
@@ -47,7 +47,16 @@
   }
 
   body {
-    background: var(--color-navy-950);
+    background-color: var(--color-navy-950);
+    background-image:
+      radial-gradient(ellipse 70% 45% at 50% -10%, rgba(56, 189, 248, 0.14), transparent),
+      linear-gradient(to right, rgba(241, 244, 248, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(241, 244, 248, 0.035) 1px, transparent 1px);
+    background-size:
+      100% 100%,
+      48px 48px,
+      48px 48px;
+    background-attachment: fixed;
     color: var(--color-ink-100);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -57,7 +66,7 @@
   }
 
   ::selection {
-    background: var(--color-violet-600);
+    background: var(--color-cyan-600);
     color: var(--color-ink-100);
   }
 

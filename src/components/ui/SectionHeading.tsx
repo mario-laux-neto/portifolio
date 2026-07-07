@@ -11,7 +11,7 @@ export function SectionHeading({ index, title, align = "left" }: SectionHeadingP
         align === "center" ? "justify-center text-center" : ""
       }`}
     >
-      <span className="font-mono text-sm text-violet-400">{index}</span>
+      <span className="font-mono text-sm text-cyan-400">{index}</span>
       <h2 className="text-2xl font-semibold tracking-tight text-ink-100 sm:text-3xl">
         {title}
       </h2>

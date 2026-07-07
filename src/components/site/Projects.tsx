@@ -59,7 +59,7 @@ function ProjectCard({
 
   return (
     <article
-      className={`group flex flex-col overflow-hidden rounded-xl border border-navy-700 bg-navy-800/60 transition-transform duration-300 hover:-translate-y-1 ${className}`}
+      className={`group flex flex-col overflow-hidden rounded-xl border border-navy-700 bg-navy-800/60 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/60 hover:shadow-[0_10px_40px_-15px_rgba(56,189,248,0.35)] ${className}`}
     >
       <div className="relative aspect-video w-full overflow-hidden bg-navy-900">
         {project.video_url ? (
@@ -97,7 +97,7 @@ function ProjectCard({
             {project.tags.map((tag) => (
               <span
                 key={tag.id}
-                className="rounded border border-navy-600 px-2 py-0.5 font-mono text-xs text-violet-400"
+                className="rounded border border-navy-600 px-2 py-0.5 font-mono text-xs text-cyan-400"
               >
                 {tag.tag}
               </span>
@@ -111,7 +111,7 @@ function ProjectCard({
               href={project.github_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-navy-600 px-3 py-2 text-xs font-semibold text-ink-300 transition-colors hover:border-violet-500 hover:text-violet-400"
+              className="inline-flex items-center gap-2 rounded-md border border-navy-600 px-3 py-2 text-xs font-semibold text-ink-300 transition-colors hover:border-cyan-500 hover:text-cyan-400"
             >
               <Github size={14} /> Repositório
             </a>
@@ -119,7 +119,7 @@ function ProjectCard({
           <button
             type="button"
             onClick={onPreview}
-            className="inline-flex items-center gap-2 rounded-md bg-violet-500/10 px-3 py-2 text-xs font-semibold text-violet-400 transition-colors hover:bg-violet-500/20"
+            className="inline-flex items-center gap-2 rounded-md bg-cyan-500/10 px-3 py-2 text-xs font-semibold text-cyan-400 transition-colors hover:bg-cyan-500/20"
           >
             <Eye size={14} /> Prévia
           </button>
@@ -128,7 +128,7 @@ function ProjectCard({
               href={project.live_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md bg-violet-500 px-3 py-2 text-xs font-semibold text-navy-950 transition-colors hover:bg-violet-400"
+              className="inline-flex items-center gap-2 rounded-md bg-cyan-500 px-3 py-2 text-xs font-semibold text-navy-950 transition-colors hover:bg-cyan-400"
             >
               <ExternalLink size={14} /> Site
             </a>
@@ -203,7 +203,7 @@ function ProjectModal({
                   type="button"
                   onClick={prev}
                   aria-label="Imagem anterior"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-violet-500 bg-navy-950/60 p-2 text-violet-400 hover:bg-violet-500 hover:text-navy-950"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-cyan-500 bg-navy-950/60 p-2 text-cyan-400 hover:bg-cyan-500 hover:text-navy-950"
                 >
                   <ChevronLeft size={20} />
                 </button>
@@ -211,7 +211,7 @@ function ProjectModal({
                   type="button"
                   onClick={next}
                   aria-label="Próxima imagem"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-violet-500 bg-navy-950/60 p-2 text-violet-400 hover:bg-violet-500 hover:text-navy-950"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-cyan-500 bg-navy-950/60 p-2 text-cyan-400 hover:bg-cyan-500 hover:text-navy-950"
                 >
                   <ChevronRight size={20} />
                 </button>
@@ -232,7 +232,7 @@ function ProjectModal({
                 aria-label={`Ir para imagem ${i + 1}`}
                 onClick={() => setIndex(i)}
                 className={`h-2 w-2 rounded-full transition-all ${
-                  i === index ? "bg-violet-400" : "bg-ink-700"
+                  i === index ? "bg-cyan-400" : "bg-ink-700"
                 }`}
               />
             ))}
@@ -246,7 +246,7 @@ function ProjectModal({
               {project.tags.map((tag) => (
                 <span
                   key={tag.id}
-                  className="rounded-full bg-navy-950 px-3 py-1 font-mono text-xs text-violet-400"
+                  className="rounded-full bg-navy-950 px-3 py-1 font-mono text-xs text-cyan-400"
                 >
                   {tag.tag}
                 </span>

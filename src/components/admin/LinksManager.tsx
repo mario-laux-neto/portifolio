@@ -113,7 +113,7 @@ export function LinksManager({ initialLinks }: { initialLinks: LinkRow[] }) {
               key={link.id}
               className="flex flex-wrap items-center gap-3 rounded-md border border-navy-700 px-4 py-3"
             >
-              <Icon size={16} className="shrink-0 text-violet-400" />
+              <Icon size={16} className="shrink-0 text-cyan-400" />
               <div className="w-40 shrink-0">
                 <TextInput
                   value={link.label}
@@ -143,7 +143,7 @@ export function LinksManager({ initialLinks }: { initialLinks: LinkRow[] }) {
                   type="button"
                   onClick={() => move(i, -1)}
                   disabled={i === 0}
-                  className="rounded p-1.5 text-ink-500 hover:text-violet-400 disabled:opacity-30"
+                  className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
                   aria-label="Mover para cima"
                 >
                   <ArrowUp size={14} />
@@ -152,7 +152,7 @@ export function LinksManager({ initialLinks }: { initialLinks: LinkRow[] }) {
                   type="button"
                   onClick={() => move(i, 1)}
                   disabled={i === links.length - 1}
-                  className="rounded p-1.5 text-ink-500 hover:text-violet-400 disabled:opacity-30"
+                  className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
                   aria-label="Mover para baixo"
                 >
                   <ArrowDown size={14} />

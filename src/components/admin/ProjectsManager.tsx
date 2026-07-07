@@ -270,7 +270,7 @@ function ProjectCard({
             type="button"
             onClick={onMoveUp}
             disabled={!onMoveUp}
-            className="rounded p-1.5 text-ink-500 hover:text-violet-400 disabled:opacity-30"
+            className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
             aria-label="Mover para cima"
           >
             <ArrowUp size={14} />
@@ -279,7 +279,7 @@ function ProjectCard({
             type="button"
             onClick={onMoveDown}
             disabled={!onMoveDown}
-            className="rounded p-1.5 text-ink-500 hover:text-violet-400 disabled:opacity-30"
+            className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
             aria-label="Mover para baixo"
           >
             <ArrowDown size={14} />
@@ -320,7 +320,7 @@ function ProjectCard({
               onChange={handleVideoSelected}
               disabled={uploadingVideo}
             />
-            <span className="inline-flex cursor-pointer items-center gap-2 rounded-md border border-navy-600 px-3.5 py-2 text-sm text-ink-300 hover:border-violet-500 hover:text-violet-400">
+            <span className="inline-flex cursor-pointer items-center gap-2 rounded-md border border-navy-600 px-3.5 py-2 text-sm text-ink-300 hover:border-cyan-500 hover:text-cyan-400">
               {uploadingVideo ? <Loader2 size={16} className="animate-spin" /> : <Video size={16} />}
               {uploadingVideo ? "Enviando..." : "Enviar vídeo"}
             </span>
@@ -339,7 +339,7 @@ function ProjectCard({
                   type="button"
                   onClick={() => moveImage(i, -1)}
                   disabled={i === 0}
-                  className="rounded bg-navy-800 p-1 text-ink-300 hover:text-violet-400 disabled:opacity-30"
+                  className="rounded bg-navy-800 p-1 text-ink-300 hover:text-cyan-400 disabled:opacity-30"
                   aria-label="Mover para trás"
                 >
                   <ArrowUp size={12} />
@@ -348,7 +348,7 @@ function ProjectCard({
                   type="button"
                   onClick={() => moveImage(i, 1)}
                   disabled={i === images.length - 1}
-                  className="rounded bg-navy-800 p-1 text-ink-300 hover:text-violet-400 disabled:opacity-30"
+                  className="rounded bg-navy-800 p-1 text-ink-300 hover:text-cyan-400 disabled:opacity-30"
                   aria-label="Mover para frente"
                 >
                   <ArrowDown size={12} />
@@ -364,7 +364,7 @@ function ProjectCard({
               </div>
             </div>
           ))}
-          <label className="flex h-24 w-24 cursor-pointer flex-col items-center justify-center gap-1 rounded-md border border-dashed border-navy-600 text-ink-500 hover:border-violet-500 hover:text-violet-400">
+          <label className="flex h-24 w-24 cursor-pointer flex-col items-center justify-center gap-1 rounded-md border border-dashed border-navy-600 text-ink-500 hover:border-cyan-500 hover:text-cyan-400">
             <input
               type="file"
               accept="image/*"
@@ -389,7 +389,7 @@ function ProjectCard({
           {tags.map((tag) => (
             <span
               key={tag.id}
-              className="inline-flex items-center gap-1.5 rounded border border-navy-600 px-2 py-1 font-mono text-xs text-violet-400"
+              className="inline-flex items-center gap-1.5 rounded border border-navy-600 px-2 py-1 font-mono text-xs text-cyan-400"
             >
               {tag.tag}
               <button

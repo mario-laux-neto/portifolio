@@ -20,7 +20,7 @@ export function Contact({
   return (
     <section id="contact" className="section-shell py-24 text-center sm:py-32">
       <Reveal className="mx-auto max-w-xl">
-        <p className="font-mono text-sm text-violet-400">04. O que vem a seguir?</p>
+        <p className="font-mono text-sm text-cyan-400">04. O que vem a seguir?</p>
         <h2 className="mt-4 text-4xl font-bold text-ink-100 sm:text-5xl">
           Entre em contato
         </h2>
@@ -35,7 +35,7 @@ export function Contact({
             href={wa}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-block rounded-md border border-violet-500 px-8 py-4 font-mono text-sm text-violet-400 transition-all hover:-translate-y-1 hover:bg-violet-500/10"
+            className="mt-10 inline-block rounded-md border border-cyan-500 px-8 py-4 font-mono text-sm text-cyan-400 shadow-[0_0_25px_-8px_rgba(56,189,248,0.5)] transition-all hover:-translate-y-1 hover:bg-cyan-500/10"
           >
             Vamos conversar!
           </a>
@@ -52,7 +52,7 @@ export function Contact({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="text-ink-300 transition-all hover:-translate-y-1 hover:text-violet-400"
+                  className="text-ink-300 transition-all hover:-translate-y-1 hover:text-cyan-400"
                 >
                   <Icon size={22} />
                 </a>

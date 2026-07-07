@@ -36,7 +36,7 @@ export function FlashlightEffect() {
       style={{
         opacity: active ? 1 : 0,
         background:
-          "radial-gradient(450px at var(--x, 50%) var(--y, 50%), rgba(168, 85, 247, 0.6), rgba(147, 51, 234, 0.25) 35%, transparent 70%)",
+          "radial-gradient(450px at var(--x, 50%) var(--y, 50%), rgba(34, 211, 238, 0.3), rgba(14, 165, 233, 0.1) 35%, transparent 70%)",
       }}
     />
   );

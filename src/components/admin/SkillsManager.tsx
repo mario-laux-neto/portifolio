@@ -87,7 +87,7 @@ export function SkillsManager({ initialSkills }: { initialSkills: Skill[] }) {
                 type="button"
                 onClick={() => move(i, -1)}
                 disabled={i === 0}
-                className="rounded p-1.5 text-ink-500 hover:text-violet-400 disabled:opacity-30"
+                className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
                 aria-label="Mover para cima"
               >
                 <ArrowUp size={14} />
@@ -96,7 +96,7 @@ export function SkillsManager({ initialSkills }: { initialSkills: Skill[] }) {
                 type="button"
                 onClick={() => move(i, 1)}
                 disabled={i === skills.length - 1}
-                className="rounded p-1.5 text-ink-500 hover:text-violet-400 disabled:opacity-30"
+                className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
                 aria-label="Mover para baixo"
               >
                 <ArrowDown size={14} />

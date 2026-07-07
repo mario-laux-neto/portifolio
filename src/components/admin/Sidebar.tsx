@@ -34,7 +34,7 @@ export function Sidebar() {
 
   return (
     <aside className="flex h-screen w-56 flex-col border-r border-navy-700 bg-navy-900 px-4 py-6">
-      <p className="mb-8 px-2 font-signature text-3xl text-violet-400">mário.</p>
+      <p className="mb-8 px-2 font-signature text-3xl text-cyan-400">mário.</p>
 
       <nav className="flex-1 space-y-1">
         {NAV_ITEMS.map((item) => {
@@ -46,7 +46,7 @@ export function Sidebar() {
               href={item.href}
               className={`flex items-center gap-3 rounded-md px-3 py-2.5 text-sm transition-colors ${
                 active
-                  ? "bg-violet-500/10 text-violet-400"
+                  ? "bg-cyan-500/10 text-cyan-400"
                   : "text-ink-300 hover:bg-navy-800 hover:text-ink-100"
               }`}
             >

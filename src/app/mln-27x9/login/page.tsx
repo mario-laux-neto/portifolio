@@ -45,7 +45,7 @@ export default function LoginPage() {
         onSubmit={handleSubmit}
         className="w-full max-w-sm rounded-xl border border-navy-700 bg-navy-800/60 p-8"
       >
-        <h1 className="font-signature text-4xl text-violet-400">mário.</h1>
+        <h1 className="font-signature text-4xl text-cyan-400">mário.</h1>
         <p className="mt-2 text-sm text-ink-500">Acesso restrito</p>
 
         <div className="mt-6 space-y-4">
@@ -59,7 +59,7 @@ export default function LoginPage() {
               autoComplete="username"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-md border border-navy-600 bg-navy-950 px-3 py-2 text-sm text-ink-100 outline-none focus:border-violet-500"
+              className="w-full rounded-md border border-navy-600 bg-navy-950 px-3 py-2 text-sm text-ink-100 outline-none focus:border-cyan-500"
             />
           </div>
           <div>
@@ -72,7 +72,7 @@ export default function LoginPage() {
               autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full rounded-md border border-navy-600 bg-navy-950 px-3 py-2 text-sm text-ink-100 outline-none focus:border-violet-500"
+              className="w-full rounded-md border border-navy-600 bg-navy-950 px-3 py-2 text-sm text-ink-100 outline-none focus:border-cyan-500"
             />
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function LoginPage() {
         <button
           type="submit"
           disabled={loading}
-          className="mt-6 flex w-full items-center justify-center gap-2 rounded-md bg-violet-500 px-4 py-2.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-violet-400 disabled:opacity-60"
+          className="mt-6 flex w-full items-center justify-center gap-2 rounded-md bg-cyan-500 px-4 py-2.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-cyan-400 disabled:opacity-60"
         >
           <LogIn size={16} />
           {loading ? "Entrando..." : "Entrar"}

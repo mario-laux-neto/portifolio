@@ -16,7 +16,7 @@ export function Field({
 }
 
 const inputClasses =
-  "w-full rounded-md border border-navy-600 bg-navy-900 px-3 py-2 text-sm text-ink-100 outline-none transition-colors focus:border-violet-500";
+  "w-full rounded-md border border-navy-600 bg-navy-900 px-3 py-2 text-sm text-ink-100 outline-none transition-colors focus:border-cyan-500";
 
 export function TextInput(props: React.InputHTMLAttributes<HTMLInputElement>) {
   return <input {...props} className={`${inputClasses} ${props.className ?? ""}`} />;
@@ -38,8 +38,8 @@ export function Button({
   variant?: "primary" | "ghost" | "danger";
 }) {
   const variants = {
-    primary: "bg-violet-500 text-navy-950 hover:bg-violet-400 disabled:opacity-60",
-    ghost: "border border-navy-600 text-ink-300 hover:border-violet-500 hover:text-violet-400",
+    primary: "bg-cyan-500 text-navy-950 hover:bg-cyan-400 disabled:opacity-60",
+    ghost: "border border-navy-600 text-ink-300 hover:border-cyan-500 hover:text-cyan-400",
     danger: "text-red-400 hover:bg-red-500/10",
   };
   return (

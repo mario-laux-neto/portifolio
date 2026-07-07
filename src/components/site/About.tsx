@@ -28,20 +28,22 @@ export function About({
           {profile?.about_paragraph_2 && <p>{profile.about_paragraph_2}</p>}
 
           {skills.length > 0 && (
-            <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-3 font-mono text-sm sm:grid-cols-3">
+            <div className="mt-6 flex flex-wrap gap-2">
               {skills.map((skill) => (
-                <li key={skill.id} className="flex items-center gap-2">
-                  <span className="text-violet-400">▹</span>
+                <span
+                  key={skill.id}
+                  className="rounded border border-navy-600 bg-navy-800 px-2.5 py-1 font-mono text-xs text-cyan-400"
+                >
                   {skill.name}
-                </li>
+                </span>
               ))}
-            </ul>
+            </div>
           )}
         </Reveal>
 
         <Reveal delay={0.16} className="mx-auto w-full max-w-xs">
           <div className="group relative aspect-square w-full">
-            <div className="absolute inset-0 z-0 translate-x-4 translate-y-4 rounded-lg border-2 border-violet-500 transition-transform duration-300 group-hover:translate-x-3 group-hover:translate-y-3" />
+            <div className="absolute inset-0 z-0 translate-x-4 translate-y-4 rounded-lg border-2 border-cyan-500 transition-transform duration-300 group-hover:translate-x-3 group-hover:translate-y-3" />
             <div className="relative z-10 h-full w-full overflow-hidden rounded-lg bg-navy-800 shadow-[0_10px_30px_-15px_rgba(2,6,23,0.7)]">
               {profile?.photo_url ? (
                 <Image
@@ -53,7 +55,7 @@ export function About({
                   priority
                 />
               ) : (
-                <div className="flex h-full w-full items-center justify-center font-signature text-6xl text-violet-400">
+                <div className="flex h-full w-full items-center justify-center font-signature text-6xl text-cyan-400">
                   {initials}
                 </div>
               )}

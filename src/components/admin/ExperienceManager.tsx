@@ -219,7 +219,7 @@ function ExperienceCard({
             type="button"
             onClick={onMoveUp}
             disabled={!onMoveUp}
-            className="rounded p-1.5 text-ink-500 hover:text-violet-400 disabled:opacity-30"
+            className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
             aria-label="Mover para cima"
           >
             <ArrowUp size={14} />
@@ -228,7 +228,7 @@ function ExperienceCard({
             type="button"
             onClick={onMoveDown}
             disabled={!onMoveDown}
-            className="rounded p-1.5 text-ink-500 hover:text-violet-400 disabled:opacity-30"
+            className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
             aria-label="Mover para baixo"
           >
             <ArrowDown size={14} />
@@ -262,7 +262,7 @@ function ExperienceCard({
                 type="button"
                 onClick={() => moveTask(i, -1)}
                 disabled={i === 0}
-                className="rounded p-1.5 text-ink-500 hover:text-violet-400 disabled:opacity-30"
+                className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
                 aria-label="Mover para cima"
               >
                 <ArrowUp size={13} />
@@ -271,7 +271,7 @@ function ExperienceCard({
                 type="button"
                 onClick={() => moveTask(i, 1)}
                 disabled={i === tasks.length - 1}
-                className="rounded p-1.5 text-ink-500 hover:text-violet-400 disabled:opacity-30"
+                className="rounded p-1.5 text-ink-500 hover:text-cyan-400 disabled:opacity-30"
                 aria-label="Mover para baixo"
               >
                 <ArrowDown size={13} />
@@ -305,7 +305,7 @@ function ExperienceCard({
           {tags.map((tag) => (
             <span
               key={tag.id}
-              className="inline-flex items-center gap-1.5 rounded border border-navy-600 px-2 py-1 font-mono text-xs text-violet-400"
+              className="inline-flex items-center gap-1.5 rounded border border-navy-600 px-2 py-1 font-mono text-xs text-cyan-400"
             >
               {tag.tag}
               <button
